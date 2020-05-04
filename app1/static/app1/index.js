@@ -33,7 +33,7 @@ function fun(){
 
 function showbooks( ) {
   //alert("hello")
-  url="getAllBooks/";
+  url="getAllBooks";
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
@@ -128,7 +128,7 @@ function Delete(){
       div.appendChild(table)
     }
   };
-  xhttp.open("GET", "getAllBooks/", true);
+  xhttp.open("GET", "getAllBooks", true);
   xhttp.send();
 }
 
