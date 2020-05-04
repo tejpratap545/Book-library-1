@@ -8,7 +8,7 @@ function fun(){
      var Book_price=document.getElementById('book_price');
      var Book_pages=document.getElementById('book_pages');
      console.log(Book_name,Book_price,Book_pages)
-      var url="savebook/?bookname="+Book_name.value+"&bookpages="+Book_pages.value+"&bookprice="+Book_price.value;
+      var url="52.14.175.144:8000/savebook/?bookname="+Book_name.value+"&bookpages="+Book_pages.value+"&bookprice="+Book_price.value;
       var xhttp = new XMLHttpRequest();
       xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
@@ -33,7 +33,7 @@ function fun(){
 
 function showbooks( ) {
   //alert("hello")
-  url="getAllBooks/";
+  url="52.14.175.144:8000/getAllBooks/";
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
@@ -161,7 +161,7 @@ else{
         }
        }
     };
-    xhttp.open("GET", "deletebook/?deletebookArray="+JSON.stringify(delitem), true);
+    xhttp.open("GET", "52.14.175.144:8000/deletebook/?deletebookArray="+JSON.stringify(delitem), true);
     xhttp.send();
      
   } else {
